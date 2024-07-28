@@ -38,25 +38,25 @@ const Salary = () => {
                     total = five_per
                     access_per = access_sal * 0.10;
                 }
-                if (three_count == 3) {
+                else if (three_count == 3) {
                     total = ten_per
                     access_per = access_sal * 0.15;
                 }
-                if (three_count == 4) {
+                else if (three_count == 4) {
                     total = fifteen_per
                     access_per = access_sal * 0.20;
                 }
-                if (three_count == 5) {
+                else if (three_count == 5) {
                     total = fifteen_per + five_per
                     access_per = access_sal * 0.25;
                 }
-                if (three_count == 6 && access_sal == 0) {
+                else if (three_count == 6 && access_sal == 0) {
                     total = fifteen_per + ten_per
                     access_per = access_sal * 0.30;
                 }
                 else {
                     std_ded += access_sal
-                    total = std_ded * 0.30
+                    total = std_ded * 0.30 * 5 + five_per
                 }
             }
             console.log(total);
