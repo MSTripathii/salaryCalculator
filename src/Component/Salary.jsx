@@ -33,24 +33,24 @@ const Salary = () => {
                     access_per = access_sal * 0.10;
                 }
                 else if (three_count == 3) {
-                    total = ten_per
+                    total = ten_per + five_per
                     access_per = access_sal * 0.15;
                 }
                 else if (three_count == 4) {
-                    total = fifteen_per
+                    total = fifteen_per + ten_per + five_per
                     access_per = access_sal * 0.20;
                 }
                 else if (three_count == 5) {
-                    total = fifteen_per + five_per
+                    total = 2*fifteen_per + 2*five_per + ten_per
                     access_per = access_sal * 0.25;
                 }
                 else if (three_count == 6 && access_sal == 0) {
-                    total = fifteen_per + ten_per
+                    total = 3*fifteen_per + 3*ten_per
                     access_per = access_sal * 0.30;
                 }
                 else {
                     std_ded += access_sal
-                    total = std_ded * 0.30
+                    total = std_ded * 0.30 * 5 + five_per
                 }
             }
             g_total = (total + access_per) * 0.04;
