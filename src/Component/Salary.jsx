@@ -20,31 +20,37 @@ const Salary = () => {
             if (sal < 300000) {
                 final_sal = sal
             }
-            else {
+            if(sal>300000){
                 
                 const five_per = 300000 * 0.05
                 const ten_per = 300000 * 0.10
                 const fifteen_per = 300000 * 0.15
+                console.log(five_per);
+                console.log(ten_per);
+                console.log(fifteen_per);
                 let access_sal = std_ded % 300000;
+                console.log(access_sal);
                 std_ded -= access_sal
+                console.log(std_ded);
                 let three_count = std_ded / 300000
+                console.log(three_count);
                 if (three_count == 2) {
                     total = five_per
                     access_per = access_sal * 0.10;
                 }
-                else if (three_count == 3) {
+                if (three_count == 3) {
                     total = ten_per
                     access_per = access_sal * 0.15;
                 }
-                else if (three_count == 4) {
+                if (three_count == 4) {
                     total = fifteen_per
                     access_per = access_sal * 0.20;
                 }
-                else if (three_count == 5) {
+                if (three_count == 5) {
                     total = fifteen_per + five_per
                     access_per = access_sal * 0.25;
                 }
-                else if (three_count == 6 && access_sal == 0) {
+                if (three_count == 6 && access_sal == 0) {
                     total = fifteen_per + ten_per
                     access_per = access_sal * 0.30;
                 }
@@ -53,8 +59,13 @@ const Salary = () => {
                     total = std_ded * 0.30
                 }
             }
-            g_total = (total + access_per) * 0.04;
+            console.log(total);
+            let four_percent = (total + access_per) * 0.04;
+            console.log(four_percent);
+            g_total = total + access_per + four_percent
+            console.log(g_total);
             final_sal = std_ded - g_total;
+            console.log(final_sal);
             field.innerHTML = final_sal
         })
     }, [])
