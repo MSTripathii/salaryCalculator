@@ -59,13 +59,15 @@ const Salary = () => {
                     total = fifteen_per + five_per + ten_per * 3
                     access_per = access_sal * 0.25;
                 }
-                else if (three_count == 6 && access_sal == 0) {
+                else if (three_count == 6) {
                     total = 3 * fifteen_per + ten_per * 3
                     access_per = access_sal * 0.30;
                 }
                 else {
                     std_ded += access_sal
-                    total = std_ded * 0.30 * 5 + five_per
+                    total = 3 * fifteen_per + ten_per * 3 + five_per * 6
+                    access_per = access_sal * 0.30;
+                    console.log(total);
                 }
             console.log(access_per);
             console.log(total);
