@@ -65,9 +65,14 @@ const Salary = () => {
                 }
                 else {
                     std_ded += access_sal
+                    console.log(std_ded);
                     total = 3 * fifteen_per + ten_per * 3 + five_per * 6
+                    access_sal = std_ded - 1800000;
+                    std_ded = 1800000
+                    console.log(access_sal);
                     access_per = access_sal * 0.30;
                     console.log(total);
+                    console.log(access_per);
                 }
             console.log(access_per);
             console.log(total);
@@ -77,6 +82,7 @@ const Salary = () => {
             g_total = total + access_per + four_percent
             console.log(g_total);
             console.log(std_ded);
+            console.log(access_sal);
             final_sal = (std_ded + access_sal) - g_total;
             console.log(final_sal);
             it.innerHTML = g_total
